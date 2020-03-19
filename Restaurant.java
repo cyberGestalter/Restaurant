@@ -26,9 +26,9 @@ public class Restaurant {
 
         //Создание поваров
         //Связывание поваров с очередью заказов
-        /*Observer*/Cook cook1 = new Cook("Portia");
+        Cook cook1 = new Cook("Portia");
         cook1.setQueue(orderQueue);
-        /*Observer*/Cook cook2 = new Cook("Loboda");
+        Cook cook2 = new Cook("Loboda");
         cook2.setQueue(orderQueue);
 
         //Запуск нитей-демонов поваров
@@ -48,8 +48,6 @@ public class Restaurant {
 
         //Создание официанта
         Observer waiter = new Waiter();
-        //Связывание официанта с очередью заказов
-        //Запуск нити-демона официанта
 
         //Запуск нити ресторана
         Thread thread = new Thread(new RandomOrderGeneratorTask(tablets, ORDER_CREATING_INTERVAL));
